@@ -1,16 +1,11 @@
 # day_night_mood_animation
 
-A new Flutter application.
+Login page in dark and light mode with animation. While switching between themes, the sun rises and goes down.
 
-## Getting Started
+<img src="https://github.com/aniribe/day_night_mood_animation/blob/main/assets/images/screenshot.jpg" height=500px>
 
-This project is a starting point for a Flutter application.
+## Technologies used:
 
-A few resources to get you started if this is your first Flutter project:
+• Flutter
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+• Dart

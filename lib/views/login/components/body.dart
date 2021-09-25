@@ -1,9 +1,10 @@
 import 'package:day_night_mood_animation/config/app_color.dart';
 import 'package:day_night_mood_animation/config/size_config.dart';
+import 'package:day_night_mood_animation/views/login/components/rounded_text_field.dart';
 import 'package:day_night_mood_animation/views/login/components/sun.dart';
 import 'package:day_night_mood_animation/views/login/components/tabs.dart';
 import 'package:flutter/cupertino.dart';
-
+import 'package:flutter/material.dart';
 import 'land.dart';
 
 class Body extends StatefulWidget {
@@ -51,19 +52,6 @@ class _BodyState extends State<Body> {
 
   @override
   Widget build(BuildContext context) {
-//    List<Color> lightBgColors = [
-//      Color(0xFF8C2480),
-//      Color(0xFFCE587D),
-//      Color(0xFFFF9485),
-//      if (isFullSun) Color(0xFFFF9D80),
-//    ];
-
-//    var darkBgColors = [
-//      Color(0xFF0D1441),
-//      Color(0xFF283584),
-//      Color(0xFF376AB2),
-//    ];
-
     return AnimatedContainer(
       duration: _duration,
       curve: Curves.easeInOut,
@@ -86,9 +74,31 @@ class _BodyState extends State<Body> {
             padding: EdgeInsets.symmetric(horizontal: 20),
             child: SafeArea(
               child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   SizeConfig.verticalSpace(50),
                   Tabs(press: (value) => changeMood(value)),
+                  SizeConfig.verticalSpace(25),
+                  Text(
+                    "Good Morning",
+                    style: Theme.of(context).textTheme.headline3!.copyWith(
+                        fontWeight: FontWeight.bold, color: ColorConfig.white),
+                  ),
+                  SizeConfig.verticalSpace(10),
+                  Text(
+                    "Enter your Informations below",
+                    style: TextStyle(color: ColorConfig.white),
+                  ),
+                  SizeConfig.verticalSpace(50),
+                  RoundedTextField(
+                    initialValue: "your@email.com",
+                    hintText: "Email",
+                  ),
+                  SizeConfig.verticalSpace(25),
+                  RoundedTextField(
+                    initialValue: "XXXXXXX",
+                    hintText: "Password",
+                  ),
                 ],
               ),
             ),
